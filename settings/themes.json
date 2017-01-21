@@ -15,6 +15,12 @@
     "captionLeft": 200,
     "captionRight": 1080
   },
+  "Nuggets": {
+    "backgroundColor": "#000000",
+    "foregroundColor": "#de1e3d",
+    "waveBottom": 560,
+    "waveTop": 440
+  },
   "Basic": {
     "backgroundColor": "#eee",
     "foregroundColor": "#de1e3d"
