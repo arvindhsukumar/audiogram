@@ -19,7 +19,7 @@
 var path = require("path");
 
 module.exports = {
-  workingDirectory: "/mnt",
+  workingDirectory: path.join(__dirname, "..", "tmp"),
   storagePath: path.join(__dirname, "..", "media"),
   fonts: [
     { family: "Source Sans Pro", file: path.join(__dirname, "fonts", "SourceSansPro-Regular.ttf") },
