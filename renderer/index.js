@@ -48,7 +48,25 @@ module.exports = function(t) {
     context.fillRect(0, 0, theme.width, theme.height);
 
     if (backgroundImage) {
-      context.drawImage(backgroundImage, 0, 0, theme.width, theme.height);
+      width = backgroundImage.width;
+      maxWidth = theme.width;
+      height = backgroundImage.height;
+      maxHeight = theme.height;
+      aspectW = width / maxWidth;
+      aspectH = height / maxHeight;
+
+      if (aspectW > aspectH) {
+        width = maxWidth;
+        height = height / aspectW;
+      }
+      else {
+        height = maxHeight;
+        width = width / aspectH;
+      }
+      leftMargin = Math.max(0,(maxWidth - width)/2);
+      topMargin = Math.max(0,(maxHeight - height)/2);
+      
+      context.drawImage(backgroundImage, leftMargin, topMargin, width, height);
     }
 
     patterns[theme.pattern || "wave"](context, options.waveform, theme);
