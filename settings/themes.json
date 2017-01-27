@@ -21,6 +21,12 @@
     "waveBottom": 560,
     "waveTop": 440
   },
+  "Nuggets - Bottom Wave": {
+    "backgroundColor": "#000000",
+    "foregroundColor": "#de1e3d",
+    "waveBottom": 700,
+    "waveTop": 660
+  },
   "Basic": {
     "backgroundColor": "#eee",
     "foregroundColor": "#de1e3d"
